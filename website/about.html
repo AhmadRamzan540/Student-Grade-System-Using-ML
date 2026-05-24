@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – EduGrade</title>
+  <meta name="description" content="Learn about the EduGrade ML pipeline, 5 trained models, the StudentPerformance dataset, and the best model accuracy."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span>EduGrade</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link">Features</a></li>
+        <li><a href="predict.html" class="nav-link">Predict</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+      </ul>
+      <a href="predict.html" class="btn-primary nav-cta">Try Predictor</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>About</span>
+      </div>
+      <div class="section-tag">About the Project</div>
+      <h1 class="page-hero-title">Students Grading<br/><span class="gradient-text">System</span></h1>
+      <p class="page-hero-desc">A complete Machine Learning pipeline trained on real student data to predict academic outcomes with confidence.</p>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT MAIN ===== -->
+  <section class="about-section" style="padding-top: 60px;">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-desc">
+            This project is a complete Machine Learning pipeline built to predict student academic outcomes.
+            The system trains five classification algorithms on the <strong>StudentsPerformance dataset</strong> containing
+            1,000 student records with demographic, social, and academic variables.
+          </p>
+          <p class="about-desc">
+            The best-performing model — a <strong>Logistic Regression Classifier</strong> — achieved <strong>95.5% accuracy</strong> on the held-out test set.
+            The system flags whether students will <strong>pass</strong> (scoring ≥50 in Math, Reading, and Writing) or <strong>fail</strong>,
+            helping educators intervene early.
+          </p>
+          <p class="about-desc">
+            The pipeline is built using scikit-learn's <strong>Pipeline</strong> and <strong>ColumnTransformer</strong> APIs, ensuring
+            preprocessing (One-Hot Encoding + Standard Scaling) is seamlessly integrated into the model with no data leakage.
+            Hyperparameter optimization is performed via <strong>GridSearchCV</strong> with 5-fold cross-validation.
+          </p>
+          <div class="about-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">Seaborn</span>
+            <span class="tech-tag">Flask</span>
+          </div>
+        </div>
+        <div class="about-stats-grid">
+          <div class="about-stat-card">
+            <div class="about-stat-icon" style="color:#7c3aed; background:#ede9fe;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="about-stat-num">5</div>
+            <div class="about-stat-lbl">ML Models Trained</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon" style="color:#059669; background:#d1fae5;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div class="about-stat-num">95.5%</div>
+            <div class="about-stat-lbl">Best Accuracy</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon" style="color:#2563eb; background:#dbeafe;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="about-stat-num">1,000</div>
+            <div class="about-stat-lbl">Training Records</div>
+          </div>
+          <div class="about-stat-card">
+            <div class="about-stat-icon" style="color:#d97706; background:#fef3c7;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="about-stat-num">6</div>
+            <div class="about-stat-lbl">Input Features</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ML PIPELINE STEPS ===== -->
+  <section class="pipeline-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Architecture</div>
+        <h2 class="section-title">How the ML Pipeline Works</h2>
+        <p class="section-desc">A step-by-step overview of the data science process from raw data to live prediction.</p>
+      </div>
+      <div class="pipeline-steps">
+        <div class="pipeline-step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Data Ingestion & Feature Engineering</h3>
+            <p class="step-desc">Raw student records are ingested from CSV. A binary target variable <code>passed</code> is derived: students passing Math, Reading, and Writing with ≥50 are labeled Pass (1), otherwise Fail (0). A stratified 80/20 train-test split maintains class proportions.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Preprocessing with ColumnTransformer</h3>
+            <p class="step-desc">A scikit-learn <code>ColumnTransformer</code> applies <code>OneHotEncoder(drop='first')</code> to categorical features and <code>StandardScaler()</code> to numerical features. Both are embedded inside the <code>Pipeline</code> to prevent data leakage.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">GridSearchCV Hyperparameter Tuning</h3>
+            <p class="step-desc">Five classifiers (Logistic Regression, Decision Tree, Random Forest, KNN, SVC) are each wrapped in a <code>Pipeline</code> and tuned with <code>GridSearchCV</code> using 5-fold cross-validation. The optimal hyperparameters are automatically selected.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3 class="step-title">Evaluation & Model Selection</h3>
+            <p class="step-desc">All tuned pipelines are evaluated on the held-out test set. Accuracy, Precision, Recall, F1-Score, and a full Classification Report are generated. The winner (Logistic Regression at 95.5%) is saved as a unified <code>best_pipeline.pkl</code>.</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-number">05</div>
+          <div class="step-body">
+            <h3 class="step-title">Flask API & Live Prediction Serving</h3>
+            <p class="step-desc">A Flask REST server loads the saved pipeline and exposes a <code>POST /api/predict</code> endpoint. Raw JSON inputs are fed directly into the pipeline, returning the prediction label and confidence probability. The website calls this endpoint in real time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-text">
+          <h2 class="cta-title">Ready to Predict?</h2>
+          <p class="cta-desc">Enter student information and get an instant, ML-powered prediction in seconds.</p>
+        </div>
+        <a href="predict.html" class="btn-primary btn-lg">
+          Try the Predictor
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom: 8px;">
+          <div class="logo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <span style="color:#1e293b; font-weight: 700;">EduGrade</span>
+        </div>
+        <p class="footer-tagline">AI-Powered Student Performance Predictor</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="predict.html">Predict</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Students Grading System. Built with Machine Learning.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

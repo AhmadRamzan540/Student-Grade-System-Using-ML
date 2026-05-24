@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features – EduGrade</title>
+  <meta name="description" content="Explore the 6 key input factors used by EduGrade's machine learning model to predict student academic performance."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <span>EduGrade</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="features.html" class="nav-link active">Features</a></li>
+        <li><a href="predict.html" class="nav-link">Predict</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+      <a href="predict.html" class="btn-primary nav-cta">Try Predictor</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Features</span>
+      </div>
+      <div class="section-tag">Input Factors</div>
+      <h1 class="page-hero-title">What Determines a<br/><span class="gradient-text">Student's Grade?</span></h1>
+      <p class="page-hero-desc">The prediction model uses these 6 key attributes gathered from student records. Each factor contributes to the model's prediction of academic success.</p>
+    </div>
+  </div>
+
+  <!-- ===== FEATURES GRID ===== -->
+  <section class="features-section" style="padding-top: 60px;">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card" data-delay="0">
+          <div class="feature-icon" style="background: #ede9fe; color: #7c3aed;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+          </div>
+          <h2 class="feature-title">Gender</h2>
+          <p class="feature-desc">Student's gender: <strong>Female</strong> or <strong>Male</strong>. Gender-based learning patterns are factored into the model.</p>
+          <div class="feature-options">
+            <span class="option-tag">Female</span>
+            <span class="option-tag">Male</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-delay="50">
+          <div class="feature-icon" style="background: #fce7f3; color: #db2777;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h2 class="feature-title">Race / Ethnicity</h2>
+          <p class="feature-desc">Student belongs to one of five ethnicity groups (A through E), each reflecting different socioeconomic contexts.</p>
+          <div class="feature-options">
+            <span class="option-tag">Group A</span><span class="option-tag">Group B</span><span class="option-tag">Group C</span><span class="option-tag">Group D</span><span class="option-tag">Group E</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-delay="100">
+          <div class="feature-icon" style="background: #dbeafe; color: #2563eb;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h2 class="feature-title">Parental Education</h2>
+          <p class="feature-desc">The highest education level attained by the student's parents — a strong indicator of academic support at home.</p>
+          <div class="feature-options">
+            <span class="option-tag">Some HS</span><span class="option-tag">High School</span><span class="option-tag">Some College</span><span class="option-tag">Associate's</span><span class="option-tag">Bachelor's</span><span class="option-tag">Master's</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-delay="150">
+          <div class="feature-icon" style="background: #fef3c7; color: #d97706;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h18l-2 7H5L3 2z"/><path d="M5 9l2 13h10l2-13"/><path d="M9 13h6"/></svg>
+          </div>
+          <h2 class="feature-title">Lunch Type</h2>
+          <p class="feature-desc">Whether the student receives a <strong>Standard</strong> or <strong>Free/Reduced</strong> lunch — a proxy for household income and socioeconomic status.</p>
+          <div class="feature-options">
+            <span class="option-tag">Standard</span><span class="option-tag">Free / Reduced</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-delay="200">
+          <div class="feature-icon" style="background: #d1fae5; color: #059669;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h2 class="feature-title">Test Prep Course</h2>
+          <p class="feature-desc">Whether the student <strong>completed</strong> or <strong>did not complete</strong> the preparation course before exams. Highly impacts performance.</p>
+          <div class="feature-options">
+            <span class="option-tag">Completed</span><span class="option-tag">None</span>
+          </div>
+        </div>
+
+        <div class="feature-card feature-highlight" data-delay="250">
+          <div class="feature-icon" style="background: #e0e7ff; color: #4338ca;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="highlight-badge">Key Predictor</div>
+          <h2 class="feature-title">Math Score</h2>
+          <p class="feature-desc">The student's math exam score (0–100). This is the <strong>most significant predictor</strong> in the model. A score of 50+ is the passing benchmark.</p>
+          <div class="feature-options">
+            <span class="option-tag option-range">0 – 100</span>
+            <span class="option-tag option-pass">Pass Threshold: 50+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODEL ACCURACY SECTION ===== -->
+  <section class="accuracy-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Model Performance</div>
+        <h2 class="section-title">5 Models Evaluated</h2>
+        <p class="section-desc">Each machine learning model was trained and cross-validated on 1,000 student records. Below are their optimized accuracy scores.</p>
+      </div>
+      <div class="accuracy-grid">
+        <div class="accuracy-card best-model">
+          <div class="acc-rank">#1</div>
+          <div class="acc-model-name">Logistic Regression</div>
+          <div class="acc-bar-wrap">
+            <div class="acc-bar" style="--width: 95.5%"></div>
+          </div>
+          <div class="acc-score">95.5%</div>
+          <div class="acc-badge">Best Model</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="acc-rank">#2</div>
+          <div class="acc-model-name">Decision Tree</div>
+          <div class="acc-bar-wrap">
+            <div class="acc-bar" style="--width: 95.5%"></div>
+          </div>
+          <div class="acc-score">95.5%</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="acc-rank">#3</div>
+          <div class="acc-model-name">Support Vector Classifier</div>
+          <div class="acc-bar-wrap">
+            <div class="acc-bar" style="--width: 95%"></div>
+          </div>
+          <div class="acc-score">95.0%</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="acc-rank">#4</div>
+          <div class="acc-model-name">Random Forest</div>
+          <div class="acc-bar-wrap">
+            <div class="acc-bar" style="--width: 94.5%"></div>
+          </div>
+          <div class="acc-score">94.5%</div>
+        </div>
+        <div class="accuracy-card">
+          <div class="acc-rank">#5</div>
+          <div class="acc-model-name">K-Nearest Neighbors</div>
+          <div class="acc-bar-wrap">
+            <div class="acc-bar" style="--width: 92.5%"></div>
+          </div>
+          <div class="acc-score">92.5%</div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: 48px;">
+        <a href="predict.html" class="btn-primary btn-lg">
+          Try the Predictor
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom: 8px;">
+          <div class="logo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <span style="color:#1e293b; font-weight: 700;">EduGrade</span>
+        </div>
+        <p class="footer-tagline">AI-Powered Student Performance Predictor</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="predict.html">Predict</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Students Grading System. Built with Machine Learning.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
