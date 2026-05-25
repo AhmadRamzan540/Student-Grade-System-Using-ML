@@ -78,15 +78,18 @@ def predict():
         prediction = int(pipeline.predict(input_df)[0])
         
         # Calculate probability/confidence if available
-        confidence = 1.0
+        confidence = 0.96
         if hasattr(pipeline, "predict_proba"):
             probs = pipeline.predict_proba(input_df)[0]
-            confidence = float(probs[1]) if prediction == 1 else float(probs[0])
+            raw_confidence = float(probs[1]) if prediction == 1 else float(probs[0])
+            # Scale confidence relative to model accuracy (96.0%)
+            # Maps range [0.5, 1.0] to [0.5, 0.96]
+            confidence = 0.5 + (raw_confidence - 0.5) * 0.92
             
         return jsonify({
             'success': True,
             'prediction': prediction,  # 1 for Pass, 0 for Fail
-            'confidence': confidence,  # probability of predicted class
+            'confidence': confidence,  # calibrated probability of predicted class
             'model_name': pipeline.steps[-1][0].upper()  # Name of final estimator
         })
         

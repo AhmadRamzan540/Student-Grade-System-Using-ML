@@ -172,7 +172,11 @@ function predictGrade({ gender, race, education, lunch, prep, mathScore }) {
   let prob = Math.max(0.04, Math.min(0.97, baseProbPass + delta));
 
   const pass = prob >= 0.50;
-  return { pass, confidence: pass ? prob : 1 - prob, rawProb: prob };
+  const rawConfidence = pass ? prob : 1 - prob;
+  // Scale confidence relative to model accuracy (96.0%)
+  // Maps range [0.5, 1.0] to [0.5, 0.96]
+  const calibratedConfidence = 0.5 + (rawConfidence - 0.5) * 0.92;
+  return { pass, confidence: calibratedConfidence, rawProb: prob };
 }
 
 // ---- FORM VALIDATION ----

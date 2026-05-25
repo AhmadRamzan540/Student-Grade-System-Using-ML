@@ -137,4 +137,7 @@ os.makedirs("models", exist_ok=True)
 with open("models/best_model.pkl", "wb") as f:
     pickle.dump(results[best_model_name]["model"], f)
 
-print("\nModel saved successfully")
+with open("models/best_pipeline.pkl", "wb") as f:
+    pickle.dump(results[best_model_name]["model"], f)
+
+print("\nModel saved successfully as models/best_model.pkl and models/best_pipeline.pkl")
