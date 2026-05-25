@@ -3,9 +3,10 @@ import pickle
 import pandas as pd
 import numpy as np
 
-# ==============================================================================
+
 # 1. SETUP AND LOAD PIPELINE
-# ==============================================================================
+
+
 best_pipeline_path = os.path.join("models", "best_pipeline.pkl")
 
 if not os.path.exists(best_pipeline_path):
@@ -22,9 +23,9 @@ with open(best_pipeline_path, 'rb') as f:
     
 print("\n[SUCCESS] Loaded unified end-to-end best-performing ML pipeline successfully.")
 
-# ==============================================================================
+
 # 2. SEQUENTIAL USER INGESTION & INTERACTIVE FLAT VALIDATION
-# ==============================================================================
+
 
 # --- Gender Ingestion ---
 gender_options = ['female', 'male']
@@ -58,7 +59,7 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
-# --- Parental Level of Education Ingestion ---
+# Parental Level of Education Ingestion 
 edu_options = [
     'some high school', 'high school', 'some college', 
     "associate's degree", "bachelor's degree", "master's degree"
@@ -77,7 +78,7 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
-# --- Lunch Type Ingestion ---
+# Lunch Type Ingestion 
 lunch_options = ['standard', 'free/reduced']
 print("\nSelect Lunch Type:")
 for idx, opt in enumerate(lunch_options, 1):
@@ -93,7 +94,7 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
-# --- Test Preparation Course Ingestion ---
+# Test Preparation Course Ingestion 
 prep_options = ['none', 'completed']
 print("\nSelect Test Preparation Course:")
 for idx, opt in enumerate(prep_options, 1):
@@ -109,7 +110,7 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
-# --- Math Score Ingestion ---
+# Math Score Ingestion 
 print("\nEnter student's Math Score (0-100):")
 while True:
     try:
@@ -121,9 +122,9 @@ while True:
     except ValueError:
         print("Please enter a valid numeric value.")
 
-# ==============================================================================
+
 # 3. DATAFRAME CONSTRUCT & PREDICTION INFERENCE
-# ==============================================================================
+
 
 # Construct raw DataFrame with exact feature names matching the ColumnTransformer preprocessor
 input_df = pd.DataFrame([{
@@ -154,9 +155,10 @@ if hasattr(pipeline, "predict_proba"):
     probs = pipeline.predict_proba(input_df)[0]
     probability = probs[1]
 
-# ==============================================================================
+
 # 4. PREDICTION RESULT VISUALIZATION
-# ==============================================================================
+
+
 print("\n" + "="*50)
 print(" ML PREDICTION INFERENCE RESULT")
 print("="*50)
